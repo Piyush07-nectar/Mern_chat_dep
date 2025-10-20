@@ -7,7 +7,7 @@ export default defineConfig({
     proxy: {
       // ✅ Proxy API requests to your backend
       "/message": {
-        target: "http://localhost:3000", // your backend server
+        target: "https://mern-chat-dep-dpa0.onrender.com", // your backend server
         changeOrigin: true, // ensures host header is rewritten
         secure: false, // allows self-signed certificates (if any)
       },

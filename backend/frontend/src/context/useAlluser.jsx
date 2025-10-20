@@ -12,7 +12,7 @@ export default function useAllUser() {
     const getUsers = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3000/user/alluser", {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/user/alluser`, {
           withCredentials: true, // ✅ send cookies
         });
 

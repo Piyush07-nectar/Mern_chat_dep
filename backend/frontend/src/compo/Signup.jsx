@@ -50,7 +50,7 @@ const Signup = () => {
     confirmPassword: form.confirmPassword,
   };
  try {
-    const response = await axios.post("http://localhost:3000/user/signup", user_data, {
+    const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/user/signup`, user_data, {
           withCredentials: true, // ✅ allow cookies
         }
 );

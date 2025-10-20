@@ -23,9 +23,10 @@ export const SocketProvider = ({ children }) => {
       console.log("🔌 Connecting socket for user:", userId);
 
       // Create a new socket connection
-      const newSocket = io("https://mern-chat-dep-dpa0.onrender.com", {
-        query: { userId },
-      });
+     const newSocket = io(import.meta.env.VITE_BACKEND_URL, {
+  query: { userId: userId },
+});
+
 
       // Listen for updates from the server
       newSocket.on("getOnlineUser", (users) => {

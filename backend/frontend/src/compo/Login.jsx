@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useAuth } from "../context/Authenticate";
-
+import.meta.env.VITE_BACKEND_URL
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
   const [auth, setAuth] = useAuth();
@@ -22,10 +22,10 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/user/login",
-        { email, password },
-        { withCredentials: true }
-      );
+  `${import.meta.env.VITE_BACKEND_URL}/user/login`,
+  { email, password },
+  { withCredentials: true }
+);
 
       // ✅ Show success toast with custom styling
       toast.success(`🎉 Welcome back, ${response.data.user.name}!`, {
