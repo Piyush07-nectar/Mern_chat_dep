@@ -23,7 +23,7 @@ export const SocketProvider = ({ children }) => {
       console.log("🔌 Connecting socket for user:", userId);
 
       // Create a new socket connection
-      const newSocket = io("http://localhost:3000", {
+      const newSocket = io("https://mern-chat-dep-dpa0.onrender.com", {
         query: { userId },
       });
 
