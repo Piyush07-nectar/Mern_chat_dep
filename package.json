@@ -1,0 +1,13 @@
+{
+  "name": "mern-chat-app",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "cd backend && npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "cd backend && node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "MERN Chat Application"
+}
+
