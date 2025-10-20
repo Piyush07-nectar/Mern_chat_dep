@@ -1,5 +1,5 @@
 import React from 'react'
-import Usercomp from './usercomp'
+import Usercomp from './Usercomp'
 import useAllUser from '../../context/useAlluser'
 const Usersearch = () => {
   const[allUserInfo,setAllUserInfo]=useAllUser()
